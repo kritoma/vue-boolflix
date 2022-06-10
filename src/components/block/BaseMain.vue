@@ -1,27 +1,20 @@
 <template>
 <main>
-    <div>
-        <ul>
-            <li v-for="(film, index) in dati.films" :key="index">
-                <h2>{{film.title}}</h2>
-                <h3>{{film.original_title}}</h3>
-                <span>{{film.original_language}}</span>
-                <span>{{film.vote_average}}</span>
-            </li>
-        </ul>
-    </div>
+   <SectionFilm/>
+   <SectionTv/>
 </main>
 </template>
 
 <script>
-
-import dati from '../../shared/dati';
+import SectionFilm from '../section/SectionFilm.vue';
+import SectionTv from '../section/SectionTv.vue';
 
 export default {
+  components: { SectionFilm, SectionTv },
     name: "BaseMain",
     data() {
         return {
-            dati,
+            
         }
     },
    

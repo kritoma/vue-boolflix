@@ -14,5 +14,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+header {
+  background-color: #2c2c2c;
+  padding: 1.25rem;
+}
 </style>
