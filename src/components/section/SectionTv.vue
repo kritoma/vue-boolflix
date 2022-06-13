@@ -1,16 +1,19 @@
 <template>
-  <div>
-      <CardTv :serieTv="dati.serieTv"/>
-  </div>
+  <section>
+      <div>
+        <h2>Serie Tv</h2>
+        <BaseCard v-for="(tv, index) in dati.serieTv" :key="index" :info="tv"/>
+    </div>
+  </section>
 </template>
 
 <script>
-import CardTv from '../common/CardTv.vue';
+import BaseCard from '../common/BaseCard.vue';
 import dati from '../../shared/dati';
 
 export default {
     name: "SectionTv",
-    components: { CardTv },
+    components: { BaseCard },
     data() {
         return {
             dati,

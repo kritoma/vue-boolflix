@@ -1,16 +1,19 @@
 <template>
   <section>
-      <CardFilm :films="dati.films"/>
+    <h1>Film</h1>
+    <div>
+        <BaseCard v-for="(film, index) in dati.films" :key="index" :info="film"/>
+    </div>
   </section>
 </template>
 
 <script>
-import CardFilm from '../common/CardFilm.vue';
 import dati from '../../shared/dati';
+import BaseCard from '../common/BaseCard.vue';
 
 export default {
     name: "SectionFilm",
-    components: { CardFilm },
+    components: { BaseCard },
     data() {
         return {
             dati,

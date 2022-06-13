@@ -21,6 +21,7 @@ export default {
     },
     methods: {
       searchtv() {
+        dati.films = [];
         axios.get('https://api.themoviedb.org/3/search/movie', {
           params: {
             api_key: '76ea54f3a12656613e82010a935b694d',
@@ -33,6 +34,8 @@ export default {
         }).catch((error) => {
             console.log(error)
         });
+
+        dati.serieTv = [];
         axios.get('https://api.themoviedb.org/3/search/tv', {
           params: {
              api_key: '76ea54f3a12656613e82010a935b694d',
