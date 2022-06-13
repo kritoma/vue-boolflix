@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+// flags
 import LangFlag from 'vue-lang-code-flags';
 Vue.component('lang-flag', LangFlag);
 
