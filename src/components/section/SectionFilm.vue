@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Film</h1>
+    <h1>FILM</h1>
     <div>
         <BaseCard v-for="(film, index) in dati.films" :key="index" :info="film"/>
     </div>
@@ -24,5 +24,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+  margin-bottom: 2.5rem;
 
+  h1 {
+    color: white;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .625rem;
+  }
+}
 </style>

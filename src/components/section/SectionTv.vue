@@ -1,8 +1,8 @@
 <template>
   <section>
-      <div>
-        <h2>Serie Tv</h2>
-        <BaseCard v-for="(tv, index) in dati.serieTv" :key="index" :info="tv"/>
+    <h2>SERIE TV</h2>
+    <div>
+      <BaseCard v-for="(tv, index) in dati.serieTv" :key="index" :info="tv"/>
     </div>
   </section>
 </template>
@@ -23,5 +23,16 @@ export default {
 </script>
 
 <style lang="scss">
+section {
+  
+  h2{
+    color: white;
+  }
 
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .625rem;
+  }
+}
 </style>
