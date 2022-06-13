@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="" alt="">
+        <img :src="poster(info.backdrop_path)">
         <h2>{{info.title ? info.title : info.name}}</h2>
         <h3>{{info.original_title ? info.original_title : info.original_name}}</h3>
         <lang-flag :iso = "info.original_language" :alt= "info.original_language" class="d-block"/>
@@ -18,6 +18,12 @@ export default {
     },
     components: {
         LangFlag,
+    },
+
+    methods: {
+        poster(img) {
+            return img == null ? "https://www.worldartfoundations.com/wp-content/uploads/2022/04/placeholder-image.png" : 'https://image.tmdb.org/t/p/w342/'+ img
+        }
     }
 }
 </script>
